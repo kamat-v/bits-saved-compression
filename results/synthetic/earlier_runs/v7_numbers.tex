@@ -1,0 +1,126 @@
+% Written by tools/inputs_from_notebook.py from 81bc4147-compression_progress_llm_agents_v7__1_.ipynb
+% Parsed from printed notebook output; the observer matrix and the heatmap were transcribed from annotated figures.
+% The notebook's own prose checks that failed in this run (the text has since been revised):
+%   - the ratio agent reads fewer tokens than the sealed-gain agent [A curious agent]
+%   - ranking quality falls (never rises by more than 0.01) at each step up in lambda [Ablations]
+\setnum{cfg.nworlds}{48}
+\setnum{cfg.ndev}{14}
+\setnum{cfg.ntest}{34}
+\setnum{cfg.lam}{0}
+\setnum{cfg.nagent}{20}
+\setnum{cfg.steps}{5}
+\setnum{cfg.budgetx}{1.5}
+\setnum{cfg.budget}{418}
+\setnum{cfg.nobs}{24}
+\setnum{cfg.nlong}{72}
+\setnum{dev.rho.lam0}{0.62}
+\setnum{dev.rho.maxpos}{0.54}
+\setnum{dev.rho.lam1}{0.38}
+\setnum{toy.pairs}{2{,}000}
+\setnum{toy.maxcp}{\ensuremath{-}3.18}
+\setnum{toy.teach}{17\%}
+\setnum{toy.teachother}{0\%}
+\setnum{toy.cohdiff}{\ensuremath{2.0\times 10^{-13}}}
+\setnum{toy.eg}{10.02}
+\setnum{toy.eglo}{9.61}
+\setnum{toy.eghi}{10.44}
+\setnum{toy.ndraws}{400}
+\setnum{toy.echofull}{48.1}
+\setnum{toy.echoseal}{2.7}
+\setnum{toy.seeds}{50}
+\setnum{toy.steps}{400}
+\setnum{toy.noise.surprise}{93\%}
+\setnum{toy.noise.cp}{8\%}
+\setnum{toy.noise.retro}{60\%}
+\setnum{toy.noise.infogain}{87\%}
+\setnum{toy.err.cp}{0.18}
+\setnum{toy.err.random}{0.36}
+\setnum{toy.err.novelty}{0.35}
+\setnum{toy.err.surprise}{3.05}
+\setnum{toy.p.random}{\ensuremath{6.6\times 10^{-13}}}
+\setnum{toy.u.early}{30}
+\setnum{toy.u.new}{35\%}
+\setnum{toy.u.known}{5\%}
+\setnum{toy.u.noise}{10\%}
+\setnum{toy.u.surpnoise}{90\%}
+\setnum{e1.rho.CP}{0.61}
+\setnum{e1.rho.best}{0.48}
+\setnum{e1.best}{unsealed gain}
+\setnum{e1.p}{0.0041}
+\setnum{e1.dacc.CP}{+0.118}
+\setnum{e1.dacc.oracle}{+0.118}
+\setnum{e1.honey.CP}{0\%}
+\setnum{e1.wrongbelow}{100\%}
+\setnum{dose.k}{12}
+\setnum{dose.CP}{92\%}
+\setnum{dose.maxbase}{14\%}
+\setnum{dose.maxbasename}{embedding relevance}
+\setnum{typ.rule.S}{193}
+\setnum{typ.rule.G}{98.2}
+\setnum{typ.rule.U}{20.0}
+\setnum{typ.noise.S}{4080}
+\setnum{typ.noise.G}{5.4}
+\setnum{typ.noise.U}{1.3}
+\setnum{typ.wrong.G}{2.1}
+\setnum{typ.wrong.U}{\ensuremath{-}19.2}
+\setnum{cert.mean12}{\ensuremath{-}95}
+\setnum{cert.any12}{0\%}
+\setnum{abl.echo.unsealed}{1.9}
+\setnum{abl.echo.sealed}{12.6}
+\setnum{cert.rate}{0.51}
+\setnum{cert.n}{1}
+\setnum{cert.share}{3\%}
+\setnum{cert.nfinal}{1}
+\setnum{cert.mean}{\ensuremath{-}31}
+\setnum{cert.wrong}{\ensuremath{-}260}
+\setnum{cert.min}{68}
+\setnum{cert.max}{68}
+\setnum{cert.median}{68}
+\setnum{gaz.rule.with}{98}
+\setnum{gaz.rule.without}{331}
+\setnum{gaz.wrong.with}{2}
+\setnum{gaz.wrong.without}{221}
+\setnum{gaz.rho.without}{0.08}
+\setnum{gaz.wrong3.without}{97\%}
+\setnum{peek.k}{32}
+\setnum{peek.pos}{middle}
+\setnum{peek.rho}{0.47}
+\setnum{peek.read}{33\%}
+\setnum{peek.learn}{0.16}
+\setnum{ag.acc.CP}{0.98}
+\setnum{ag.bpt.CP}{1.089}
+\setnum{ag.best}{unsealed gain}
+\setnum{ag.acc.best}{0.96}
+\setnum{ag.bpt.best}{1.103}
+\setnum{ag.p.bpt}{0.048}
+\setnum{ag.acc.ratio}{0.98}
+\setnum{ag.bpt.ratio}{1.083}
+\setnum{ag.tok.ratio}{907}
+\setnum{ag.tok.CP}{757}
+\setnum{ag.p.acc}{0.005}
+\setnum{agb.bpt.ratio}{1.100}
+\setnum{agb.bpt.CP}{1.101}
+\setnum{agb.best}{unsealed gain}
+\setnum{agb.bpt.best}{1.103}
+\setnum{agb.p}{0.78}
+\setnum{bore.rule.before}{98.2}
+\setnum{bore.rule.after}{8.4}
+\setnum{bore.partial.before}{40.9}
+\setnum{bore.partial.after}{0.2}
+\setnum{obs.self}{0.572}
+\setnum{obs.cross}{0.495}
+\setnum{obs.k}{4}
+\setnum{obs.nselfbest}{2}
+\setnum{obs.nselfgt}{4}
+\setnum{obs.self0}{0.54}
+\setnum{obs.cross0}{0.29}
+\setnum{obs.name.first}{0.5B}
+\setnum{obs.name.last}{7B}
+\setnum{obs.ind.first}{\ensuremath{-}0.01}
+\setnum{obs.ind.last}{\ensuremath{-}0.01}
+\setnum{edu.before}{0.6}
+\setnum{edu.after}{6.1}
+\setnum{edu.p}{0.0018}
+\setnum{e6.n}{7}
+\setnum{e6.rho}{0.32}
+\renewcommand{\numbersstatus}{Numbers parsed from the printed output of the executed v7 notebook (FULL mode). For exact values and vector figures, replace \texttt{paper\_inputs} with the folder inside \texttt{cp\_results.zip}.}

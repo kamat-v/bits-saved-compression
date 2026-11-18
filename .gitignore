@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Notebook and script run outputs (curated copies live in results/)
+cp_results/
+evalplus_results/
+out/
+check.json
+*.zip
+
+# Model weights and caches
+*.safetensors
+*.bin
+*.pt
+.cache/
